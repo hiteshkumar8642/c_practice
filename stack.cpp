@@ -1,4 +1,7 @@
 #include<iostream>
+#include<cstdio>
+#include<string>
+#include<ctype.h>
 using namespace std;
 #define size 10
 class stack
@@ -38,13 +41,17 @@ class stack
 			cout<<a[i]<<"\t";
 		}
 	}
+	void disptop()
+	{
+		cout<<a[top-1];
+	}
 }s1;
 int main()
 {
 	int ele,choice;
 	while(1)
 	{	
-		cout<<"\n1.push\n2.pop\n3.display\n4.exit\n";
+		cout<<"\n1.push\n2.pop\n3.display\n4.Display top\n5.exit\n";
 		cout<<"\nenter the choice\t";
 		cin>>choice;
 		switch(choice)
@@ -57,7 +64,9 @@ int main()
 				 break;
 			case 3 : s1.display();
 				 break;
-			case 4 : exit(0);
+			case 4 : s1.disptop();
+				 break;
+			case 5 : exit(0);
 			default : cout<<"\nenter the correct choice\t";
 				  cin>>choice;
 		}
