@@ -4,69 +4,63 @@
 #include<ctype.h>
 using namespace std;
 #define size 10
-class stack
+struct stack
 {
 	int a[size];
 	int top;
-	public:
+}s1;
 	void push(int ele)
 	{
-		if (top==size)
+		if (s1.top==size)
 		{
 			cout<<"\noverflow\n";
 		}
 		else
 		{
-			a[top++]=ele;
+			s1.a[++s1.top]=ele;
 			cout<<"\nelement inserted sucessfully\n";
 		}
 	}
-	void pop()
+	int pop()
 	{
-		if (top==0)
+		if (s1.top==-1)
 		{
 			cout<<"\nunderflow \nnothing to delete\n";
+			return -1;
 		}
 		else
-		{
-			top--;
+		{	int b;
 			cout<<"element deleted sucessfully";
-		}
-	}
-	void display()
-	{
-		int i;
-		for (i=0;i<top;i++)
-		{
-			cout<<a[i]<<"\t";
+			b=s1.a[s1.top];
+			s1.top--;
+			return b;
 		}
 	}
 	void disptop()
 	{
-		cout<<a[top-1];
+		cout<<s1.a[s1.top-1];
 	}
-}s1;
 int main()
 {
-	int ele,choice;
+	s1.top=-1;
+	int ele,choice,ret_ele;
 	while(1)
 	{	
-		cout<<"\n1.push\n2.pop\n3.display\n4.Display top\n5.exit\n";
+		cout<<"\n1.push\n2.pop\n3.Display top\n4.exit\n";
 		cout<<"\nenter the choice\t";
 		cin>>choice;
 		switch(choice)
 		{
 			case 1 : cout<<"\nenter the element to insert\t";
 				 cin>>ele;
-				 s1.push(ele);
+				 push(ele);
 				 break;
-			case 2 : s1.pop();
+			case 2 : ret_ele=pop();
+				 cout<<"\n deleted element is "<<ret_ele;
 				 break;
-			case 3 : s1.display();
+			case 3 : disptop();
 				 break;
-			case 4 : s1.disptop();
-				 break;
-			case 5 : exit(0);
+			case 4 : exit(0);
 			default : cout<<"\nenter the correct choice\t";
 				  cin>>choice;
 		}
