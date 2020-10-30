@@ -1,0 +1,56 @@
+Assignment 1: Searching Algorithm
+
+1) Create a random array of n integers. Accept a value x from user and use linear search algorithm to check whether the number is present in the 
+array or not and output the position if the number is present.
+
+2) Create a random array of n integers. Sort the array using bubble sort. Accept a value x from user and use binary search algorithm to check     
+whether the number is present in array or not and output the position if the number is present.
+
+3) Read the data from file 'cities.txt' containing names of 100 cities and their STD codes.Accept a name of the city from user and use linear search algorithm to check whether the name is present in the file and output the STD code, otherwise output “city not in the list”.
+
+4) Read the data from file 'sortedcities.txt' containing names of 100 cities and their STDcodes. Accept a name of the city from user and use binary
+ search algorithm to check whetherthe name is present in the file and output the STD code, otherwiseoutput “city not in the list”.
+
+________________________________________________
+
+Assignment 2: Sorting Algorithm
+
+1) Sort a random array of n integers (accept the value of n from user) in ascending order byusing a recursive Merge sort algorithm.
+
+2) Sort a random array of n integers (accept the value of n from user) in ascending order by using recursive Quicksort algorithm.
+
+3) Read the data from the ‘employee.txt’ file and sort on age using Merge sort/ Quick sort and write the sorted data to another file 
+'sortedemponage.txt'.
+
+4) Read the data from the file and sort on names in alphabetical order( use strcmp ) using Mege sort/ Quick sort and write the sorted data to 
+another file 'sortedemponname.txt'.
+
+____________________________________________________
+
+Assignment 3: Stack
+
+1) Implement a stack library (ststack.h) of integers using a static implementation of the stackand implementing the above six operations. Write a 
+driver program that includes stack libraryand calls different stack operations.
+
+2) Implement a stack library (dystack.h) of integers using a dynamic (linked list)implementation of the stack and implementing the above five 
+operations. Write a driverprogram that includes stack library and calls different stack operations.
+
+3) Write a function that check whether the parentheses are matching or not in a parenthesizedexpression, using static implementation of the stack.
+
+4) Write a function that checks whether a string of characters is palindrome or not. The function should use a stack library (cststack.h) of stack 
+of characters using a static implementation of the stack.
+
+___________________________________________________
+
+Assignment 4: Queue
+
+1) Implement a queue library (stqueue.h) of integers using a static implementation of the queue and implementing the above six operations. Write a 
+driver program that includes queue library and calls different queue operations.
+
+2) Implement a queue library (dyqueue.h) of integers using a dynamic (circular linked list)implementation of the queue and implementing the above 
+five operations. Write a driverprogram that includes queue library and calls different queue operations.
+
+3) A statically implemented queue may become full even if the initial positions in the arrayare unoccupied. To avoid this situation, a wraparound can be attempted, and initial positionsreused. The array can be treated as if it were circular. This can be implemented making use ofmod function. Implement a queue library (cstqueue.h) of integers using a staticimplementation of the circular queue and implementing the above six operations.
+
+4) A doubly ended queue allows additions and deletions from both the ends that is front andrear. Initially additions from the front will not be     possible. To avoid this situation, the array can be treated as if it were circular. Implement a queue library (dstqueue.h) of integers using a 
+static implementation of the circular queue and implementing the seven operations init(Q),isempty(Q), isFull(Q), addFront(Q,x), deleteFront(Q),     addRear(Q,x) and deleteRear(Q)
